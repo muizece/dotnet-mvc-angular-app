@@ -1,0 +1,902 @@
+﻿<div ng-app="myApp" ng-controller="myController">
+   <style>
+
+       ol.lst-kix_list_1-0.start {
+            counter-reset: lst-ctn-kix_list_1-0 0
+        }
+
+        li.li-bullet-0:before {
+            margin-left: -18pt;
+            white-space: nowrap;
+            display: inline-block;
+            min-width: 18pt
+        }
+
+        .c2 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Aptos";
+            font-style: normal
+        }
+
+        .c4 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: justify;
+            height: 11pt
+        }
+
+        .c7 {
+            margin-left: 36pt;
+            padding-top: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: justify
+        }
+
+        .c8 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: center
+        }
+
+
+        .c9 {
+            -webkit-text-decoration-skip: none;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: underline;
+            vertical-align: baseline;
+            text-decoration-skip-ink: none;
+            font-size: 11pt;
+            font-family: "Aptos";
+            font-style: normal
+        }
+
+        .c12 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: justify
+        }
+
+
+        .c13 {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Aptos";
+            font-style: normal
+        }
+
+        .c15 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            height: 11pt
+        }
+
+        .c16 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 103.5pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+
+        .c17 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: center
+        }
+
+
+        .c18 {
+            height: 0pt
+        }
+
+        .c20 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c21 {
+            padding-top: 0pt;
+            padding-bottom: 8pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: center
+        }
+
+        .c22 {
+            background-color: #adadad
+        }
+
+        .c24 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: middle;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 102.5pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+
+        .c28 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: middle;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 121.4pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        .c29 {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-right: auto
+        }
+
+        .c31 {
+            margin-right: 18pt;
+            padding-right: 4.5pt
+        }
+
+        .c34 {
+            text-indent: -22.5pt;
+            margin-right: 22.5pt
+        }
+
+        .c35 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.5;
+            orphans: 2;
+            widows: 2;
+            text-align: justify
+        }
+
+        .c36 {
+            -webkit-text-decoration-skip: none;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: underline;
+            vertical-align: baseline;
+            text-decoration-skip-ink: none;
+            font-size: 14pt;
+            font-family: "Aptos";
+            font-style: normal
+        }
+
+        .c37 {
+            height: 11pt
+        }
+
+        .c42 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: middle;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+
+        .c43 {
+            padding-top: 0pt;
+            padding-bottom: 8pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: justify
+        }
+
+        .c44 {
+            padding: 0;
+            margin: 0
+        }
+
+        .c45 {
+            background-color: #ffffff;
+            max-width: 800.5pt;
+            padding: 72pt 72pt 36pt 58.5pt
+            /*30pt 120pt 29pt 81.5pt*/
+        }
+
+        .c46 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: middle;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 75.9pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+             outline: none;
+             border-color: #007bff;
+             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+         button[type="submit"]:hover {
+                background-color: #0056b3;
+         }
+
+        p[ng-show="errorMessage"] {
+            font-size: 14px;
+            text-align: center;
+            color: red;
+            margin-top: 10px;
+        }
+
+        p[ng-show="successMessage"] {
+            font-size: 14px;
+            text-align: center;
+            color: green;
+            margin-top: 10px;
+        }
+
+        .action-btn {
+            cursor: pointer;
+            font-size: 18px;
+            color: blue;
+        }
+
+         .action-btn:hover {
+                color: red;
+         }
+
+        li.li-bullet-1:before {
+            white-space: nowrap;
+            display: inline-block;
+            min-width: 22.5pt;
+            margin-right: 22.5pt
+        }
+
+        li.li-bullet-2:before {
+            white-space: nowrap;
+            display: inline-block;
+            min-width: 22.5pt;
+            margin-right: 22.5pt
+        }
+
+
+        /* General Button Styles */
+        button {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            /* Toggle Button */
+            button.toggle-btn {
+                background-color: #007bff; /* Blue color */
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+                button.toggle-btn:hover {
+                    background-color: #0056b3;
+                    transform: scale(1.05);
+                }
+
+            /* Add Button */
+            button.add-btn {
+                background-color: #28a745; /* Green color */
+                color: white;
+            }
+
+                button.add-btn:hover {
+                    background-color: #218838;
+                    transform: scale(1.05);
+                }
+
+            /* Remove Button */
+            button.remove-btn {
+                background-color: #dc3545; /* Red color */
+                color: white;
+            }
+
+                button.remove-btn:hover {
+                    background-color: #c82333;
+                    transform: scale(1.05);
+                }
+
+            /* Button Disabled State */
+            button:disabled {
+                background-color: #6c757d; /* Gray color */
+                cursor: not-allowed;
+            }
+
+
+        #relativeDetailsTable input[type="text"] {
+            width: calc(100% - 20px); /* Full width with padding adjustment */
+            padding: 8px 10px;
+            margin: 5px 0;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #companyDetailsTable input[type="text"] {
+            width: calc(100% - 20px); /* Full width with padding adjustment */
+            padding: 8px 10px;
+            margin: 5px 0;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+
+
+
+
+        input[type="text"] {
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px; /* Rounded corners */
+            padding: 6px 8px; /* Padding to fit the current size */
+            font-size: 14px; /* Ensure consistent font size */
+            outline: none; /* Remove default focus outline */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effects */
+        }
+
+            /* Focus Effect */
+            input[type="text"]:focus {
+                border-color: #007bff; /* Blue border on focus */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+            }
+
+            /* Placeholder Styling */
+            input[type="text"]::placeholder {
+                color: #999; /* Subtle gray color */
+                font-style: italic; /* Italicized placeholder text */
+            }
+
+            /* Required Field Indicator */
+            input[type="text"][required] {
+                border-left: 3px solid #dc3545; /* Red left border for required fields */
+                padding-left: 6px; /* Adjust padding for left border */
+            }
+
+
+    </style>
+
+    <button ng-click="toggleLanguage()" class="toggle-btn">
+        {{ showEnglish ? "Switch to Arabic" : "Switch to English" }}
+    </button>
+
+
+
+    <body class="c45 doc-content">
+            <p class="c17">
+                <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 52.59px; height: 74.10px;">
+                    <img alt="" src="/images/woqod_logo.png"
+                         style="width: 52.59px; height: 74.10px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);">
+                </span>
+            </p>
+            <p class="c17 c37"><span class="c5"></span></p>
+        <div ng-show="showEnglish">
+            <p>Welcome to the English version of the form!</p>
+        <p class="c8" id="h.gjdgxs"><span class="c36">Initial Declaration Form for Insiders</span></p>
+        <p class="c8"><span class="c36">for himself/herself, spouse(s) and minor children</span></p>
+        <p class="c8"><span>(to be submitted once during service unless changes occur)</span></p>
+        <p class="c15"><span class="c2"></span></p>
+        <p class="c20"><span class="c2">The Compliance Officer,</span></p>
+        <p class="c20"><span class="c2">Qatar Fuel Company (WOQOD) Q.P.S.C.</span></p>
+        <p class="c15"><span class="c2"></span></p>
+        <p class="c12">
+            <span>
+                Pursuant to the relevant provisions of the Insider Trading Rules of Qatar Financial Market
+                Authority (QFMA), Corporate Governance Code, Conflict of Interest and Confidentiality of Information issued
+                by the relevant authorities from time to time, I , <input type="text" placeholder="Enter your name" ng-model="formData.name" required /> Staff ID   <input type="text" placeholder="Enter Staff id " ng-model="formData.StaffId" required /> , hereby
+                declare that I am holding the position of <input type="text" placeholder="Enter your position" ng-model="formData.position" required />  in Qatar Fuel Company (WOQOD) Q.P.S.C. or its
+                subsidiaries viz.   <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" required /><input type="hidden" ng-init="formData.submissionYear = new Date().getFullYear()" /> (together referred to as &ldquo;the
+            </span><span class="c38">Company</span><span class="c2">
+                Due to the position that I hold in the Company, I am or
+                may be acquainted with Material Data or Information about the Company, its activities, its clients or
+                suppliers that may not be available to public.
+            </span>
+        </p>
+        <p class="c4"><span class="c2"></span></p>
+        <p class="c12">
+            <span class="c2">
+                As such, I declare the details in Appendix-1 relating to me, my spouse(s), my minor
+                children (under 18 years of age) and their owned companies that have an investor number (if any).
+            </span>
+        </p>
+        <p class="c43">
+            <span class="c2">
+                Further, I hereby acknowledge the following in respect of myself and on behalf of my
+                spouse(s), my minor children (below the age of 18) and the companies in which they have ownership in:
+            </span>
+        </p>
+        <ol class="c44 lst-kix_list_1-0 start" start="1">
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    I, my spouse(s), and minor children are privy to material data or
+                    information relating to the Company and its parties.&rlm;
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    the details as per the Annexure - 1 shall be included in the
+                    Insiders list and shall be communicated by the Company to relevant Regulatory Authorities from time to
+                    time.
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    on my own behalf and on behalf of my spouse(s) and minor children, I
+                    bear all legal consequences if I or any of the foregoing, leak such data or material information or use
+                    it for my or their personal benefit or advise others based on such information,
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    I will maintain the confidentiality of Material Data and Information
+                    that I become acquainted with.
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    I will disclose to the Company any transaction made by me or any of
+                    the above on the Company&#39;s securities within three business days commencing from the date of the
+                    transaction and immediately notify the Company of any changes to the information contained in Appendix
+                    1
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    I, my spouse(s) and my minor children will comply with the
+                    prohibited trading periods as stipulated in relevant QFMA Regulations, rules and decisions.
+                </span>
+            </li>
+            <li class="c7 li-bullet-0">
+                <span class="c2">
+                    I will periodically, annually and whenever updating is required or
+                    requested from me to sign the necessary declarations regarding any of the foregoing.
+                </span>
+            </li>
+        </ol>
+        <p class="c4"><span class="c2"></span></p>
+        <p class="c12">
+            <span class="c2">
+                I declare that the above facts are true and correct. I hereby acknowledge that the
+                Company reserves the right to take any or all necessary actions as per the relevant Employee Policies and
+                Procedures, Terms of Employment, applicable Laws and Regulations, etc. in case if this declaration is
+                incorrect or contains false data.
+            </span>
+        </p>
+        <p class="c4"><span class="c2"></span></p>
+        <p class="c12"><span class="c2">Sign &nbsp;______________________</span></p>
+        <p class="c12"><span class="c2">Name:</span></p>
+        <p class="c12"><span class="c2">NIN Number:</span></p>
+        <p class="c12"><span class="c2">Designation:</span></p>
+        <p class="c12"><span class="c2">Staff ID:</span></p>
+        <p class="c12"><span class="c2">Qatar ID:</span></p>
+        <p class="c12"><span class="c2">Date:</span></p>
+        <p class="c21 c37"><span class="c9"></span></p>
+        <p class="c21"><span class="c9">ANNEXURE &ndash; 1</span></p>
+        <p class="c21"><span class="c9">LIST OF RELATIVES </span></p>
+        <p class="c21"><span class="c9">AND </span></p>
+        <p class="c21"><span class="c9">THE COMPANIES IN WHICH THEY HAVE OWNERSHIP IN</span></p>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+        <body ng-controller="myController">
+                <form ng-submit="submitForm()" name="declarationForm" novalidate>
+                <!-- Relative Details Table -->
+                <table id="relativeDetailsTable" class="c29">
+                    <thead>
+                        <tr class="c18">
+                            <th class="c28 c22">Relative Name</th>
+                            <th class="c42 c22">Relation to Employee</th>
+                            <th class="c16 c22">ID Number<br>(QID / Passport)</th>
+                            <th class="c46 c22">NIN</th>
+                            <th class="c22 c24">Shares Held in WOQOD</th>
+                            <th class="c28 c22">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in relativeDetails">
+                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.RelativeName" required></td>
+                                <td><input type="text" placeholder="Enter Relation" ng-model="row.Relation" required></td>
+                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.IdNumber" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.RNin" required></td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.RShares" required></td>
+                            <td>
+                                    <button type="button" class="add-btn" ng-click="addRow(relativeDetails)">+</button>
+                                <button type="button" class="remove-btn" ng-click="removeRow(relativeDetails, $index)" ng-show="$index > 0">-</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Company Details Table -->
+                <table id="companyDetailsTable" class="c29">
+                    <thead>
+                        <tr class="c18">
+                            <th class="c22 c28">Company Name</th>
+                            <th class="c22 c42">Owned by</th>
+                            <th class="c16 c22">CR / Incorporation #</th>
+                            <th class="c22 c46">NIN</th>
+                            <th class="c24 c22">Shares Held in WOQOD</th>
+                            <th class="c28 c22">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in companyDetails">
+                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.CompanyName" required></td>
+                                <td><input type="text" placeholder="Enter Owner Name" ng-model="row.OwnerName" required></td>
+                                <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.CR" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.CNin" required></td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.CShares" required></td>
+                            <td>
+                                    <button type="button" class="add-btn" ng-click="addRow(companyDetails)">+</button>
+                                    <button type="button" class="remove-btn" ng-click="removeRow(companyDetails, $index)" ng-show="$index > 0">-</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Submit Button -->
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+        <p class="c4"><span class="c2"></span></p>
+        <p class="c12"><span class="c2">Sign &nbsp;______________________</span></p>
+        <p class="c12"><span class="c2">Name:</span></p>
+        <p class="c12"><span class="c2">NIN Number:</span></p>
+        <p class="c12"><span class="c2">Designation:</span></p>
+        <p class="c12"><span class="c2">Staff ID:</span></p>
+        <p class="c12"><span class="c2">Qatar ID:</span></p>
+        <p class="c12"><span class="c2">Date:</span></p>
+
+            <!-- Messages -->
+            <p ng-show="errorMessage" class="error">{{ errorMessage }}</p>
+            <p ng-show="successMessage" class="success">{{ successMessage }}</p>
+        </body>
+        </div>
+    </body>
+
+
+
+
+
+    <body class="c45 doc-content">
+        <div ng-show="!showEnglish" dir="rtl">
+            <p>!Welcome to the arabic version of the form</p>
+        <p class="c8" id="h.gjdgxs" dir="rtl"><span class="c36">النموذج الرئيسي لإقرارات شخص مطلع</span></p>
+        <p class="c8">
+            <span class="c36" dir="rtl">
+                أصالة عن نفسه وازواجه وابنائه القُصَّر
+               <span>
+        </p>
+        <p class="c8" dir="rtl"><span class="c36" dir="rtl">(يقدم مرة واحدة اثناء الخدمة ما لم يتم تعديله أو حدوث أمور مستجدة)</span></p>
+        <p class="c15" dir="rtl"><span class="c2"></span></p>
+        <p class="c20" dir="rtl"><span class="c2">،مسؤول الامتثال</span></p>
+        <p class="c20" dir="rtl"><span class="c2">.شركة قطر للوقود (وقود) ش.م.ع.ق</span></p>
+        <p class="c15" dir="rtl"><span class="c2"></span></p>
+        <p class="c12" dir="rtl">
+            <span class="c35">
+                وفقا للأحكام ذات الصلة من قواعد المطلعين لهيئة قطر للأسواق المالية وقانون حوكمة الشركات وتضارب المصالح وسرية المعلومات الصادرة عن السلطات المختصة من حين لآخر، أقر بموجب هذا بأنني<input type="text" placeholder="Enter your name" ng-model="formData.name" required />
+                أشغل منصب <input type="text" placeholder="Enter your position" ng-model="formData.position" required />  في شركة قطر للوقود (وقود) ش.م.ق.ع. أو الشركات التابعة لها <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" required /> (يشار إليها معا باسم
+            </span><span class="c38" dir="rtl">" الشركة")</span><span class="c2">
+                
+            </span>
+        </p>
+        <p class="c4" dir="rtl"><span class="c2"></span></p>
+        <p class="c12" dir="rtl">
+            <span class="c2"  dir="rtl">
+                على هذا النحو، أعلن التفاصيل الواردة في الملحق -1 المتعلقة بي وزوجتي (زوجاتي) وأطفالي القصر (أقل من 18 عاما) والشركات المملوكة لهم التي لديها رقم مستثمر (إن كانوا).
+            </span>
+        </p>
+        <p class="c43" dir="rtl">
+            <span class="c2">
+                علاوة على ذلك، فيما يتعلق بي وبالنيابة عن زوجتي (زوجاتي) وأطفالي القصر (دون سن 18 عاما) والشركات المملوكة لهم، وأقر بموجب هذا بما يلي:
+
+            </span>
+        </p>
+        <ol class="c44 lst-kix_list_5-0 start" start="1">
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    أنا وزوجي /ازواجي/ واولادي القصر مطلعون على بيانات أو معلومات جوهرية متعلقة بالشركة والأطراف التي تتعامل معها؛
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-2" dir="rtl">
+                <span class="c2">
+                    سيتم تضمين التفاصيل الواردة في الملحق رقم - 1 في قائمة المطلعين، وستقوم الشركة بإبلاغها إلى السلطات التنظيمية ذات الصلة من حين لآخر؛
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    اصالة عن نفسي ونيابة عن زوجي/ازواجي واولادي القصر أتحمل جميع الآثار القانونية إذا قمت أو قام أيا من المذكورين بتسريب هذه البيانات أو المعلومات الجوهرية أو استخدامها لمصلحتي/مصلحتهم الشخصية أو تقديم المشورة للآخرين بناء على هذه المعلومات
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    سأحافظ على سرية البيانات والمعلومات الجوهرية التي تعرفت عليها ؛
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    سوف أفصح للشركة عن أي تعامل يتم من جانبي أو أي من المذكورين بعاليه على الأوراق المالية للشركة في غضون ثلاثة أيام عمل تبدأ من تاريخ المعاملة وإخطار الشركة على الفور بأي تغييرات على المعلومات الواردة في الملحق رقم -1؛
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    سوف ألتزم وزوجي/زوجاتي واولادي القصر بفترات التداول المحظورة على النحو المنصوص عليه في لوائح وقواعد وقرارات هيئة قطر للأسواق المالية ذات الصلة؛
+
+                </span>
+            </li>
+            <li class="c12 c31 li-bullet-1" dir="rtl">
+                <span class="c2">
+                    سأقوم بشكل دوري وسنوي وكلما دعا الحال للتحديث أو تم طلب ذلك مني بتوقيع ما يلزم من إقرارات بشأن أي ما تقدم،
+
+                </span>
+            </li>
+        </ol>
+        <p class="c4 c34" dir="rtl"><span class="c2"></span></p>
+        <p class="c12" dir="rtl">
+            <span class="c2">
+                أقر بأن الحقائق المذكورة أعلاه صحيحة. وأقر بموجب هذا بأن الشركة تحتفظ بالحق في اتخاذ أي أو كل الإجراءات اللازمة وفقا لسياسات وإجراءات الموظفين ذات الصلة، وشروط التوظيف ، والقوانين واللوائح المعمول بها ، وما إلى ذلك في حالة ما إذا كان هذا الإعلان غير صحيح أو يحتوي على بيانات خاطئة.
+            </span>
+        </p>
+        <p class="c4" dir="rtl"><span class="c2"></span></p>
+        <p class="c12" dir="rtl"><span class="c2">التوقيع:______________________</span></p>
+        <p class="c12" dir="rtl"><span class="c2">الاسم:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">الوظيفة:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم المساهم:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم البطاقة الشخصية:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم الموظف:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">التاريخ:</span></p>
+        <p class="c21 c37" dir="rtl"><span class="c9"></span></p>
+        <p class="c21" dir="rtl">
+            <span class="c9">
+                الملحق - 1
+           </span>
+        </p>
+        <p class="c21"><span class="c9">قائمة الأقارب</span></p>
+        <p class="c21"><span class="c9">و </span></p>
+        <p class="c21">
+            <span class="c9">
+                الشركات المملوكة لهم
+            </span>
+        </p>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+        <body ng-controller="myController">
+            <form ng-submit="submitForm()">
+                <!-- Relative Details Table -->
+                <table id="relativeDetailsTable" class="c29">
+                    <thead>
+                        <tr class="c18">
+                            <th class="c28 c22" dir="rtl">Actions</th>
+                            <th class="c22 c24" dir="rtl">الأسهم المملوكة في وقود</th>
+                            <th class="c46 c22" dir="rtl">رقم المساهم</th>
+                            <th class="c16 c22" dir="rtl">رقم البطاقة / جواز<br>السفر</th>
+                            <th class="c42 c22" dir="rtl">العلاقة مع الموظف</th>
+                            <th class="c28 c22" dir="rtl">اسم القريب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in relativeDetails">
+                            <td>
+                                    <button type="button" class="add-btn" ng-click="addRow(relativeDetails)">+</button>
+                                    <button type="button" class="remove-btn" ng-click="removeRow(relativeDetails, $index)" ng-show="$index > 0">-</button>
+                            </td>
+                                <td><input type="text" placeholder="Enter Shares" ng-model="row.RShares" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.RNin" required></td>
+                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.IdNumber" required></td>
+                            <td><input type="text" placeholder="Enter Relation" ng-model="row.Relation" required></td>
+                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.RelativeName" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Company Details Table -->
+                <table id="companyDetailsTable" class="c29">
+                    <thead>
+                        <tr class="c18">
+                            <th class="c28 c22" dir="rtl">Actions</th>
+                            <th class="c24 c22" dir="rtl">الأسهم المملوكة في وقود</th>
+                            <th class="c22 c46" dir="rtl">رقم المساهم</th>
+                                <th class="c16 c22" dir="rtl">رقم السجل <br>التجاري</th>
+                            <th class="c22 c42">مملوكة ل</th>
+                            <th class="c22 c28" dir="rtl">اسم الشركة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in companyDetails">
+                            <td>
+                                    <button type="button" class="add-btn" ng-click="addRow(companyDetails)">+</button>
+                                <button type="button" class="remove-btn" ng-click="removeRow(companyDetails, $index)" ng-show="$index > 0">-</button>
+                            </td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.CShares" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.CNin" required></td>
+                            <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.CR" required></td>
+                            <td><input type="text" placeholder="Enter Owner Name" ng-model="row.OwnerName" required></td>
+                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.CompanyName" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Submit Button -->
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+         <p class="c4" dir="rtl"><span class="c2"></span></p>
+        <p class="c12" dir="rtl"><span class="c2">التوقيع:______________________</span></p>
+        <p class="c12" dir="rtl"><span class="c2">الاسم:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">الوظيفة:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم المساهم:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم البطاقة الشخصية:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">رقم الموظف:</span></p>
+        <p class="c12" dir="rtl"><span class="c2">التاريخ:</span></p>
+
+
+            <!-- Messages -->
+            <p ng-show="errorMessage" class="error">{{ errorMessage }}</p>
+            <p ng-show="successMessage" class="success">{{ successMessage }}</p>
+        </body>
+        </div>
+    </body>
+
+
+
+    
+
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myController", function ($scope, $http) {
+            $scope.showEnglish = true; // Default to English
+
+            $scope.toggleLanguage = function () {
+                $scope.showEnglish = !$scope.showEnglish;
+            };
+
+            $scope.relativeDetails = [{}];
+            $scope.companyDetails = [{}];
+            $scope.errorMessage = "";
+            $scope.successMessage = "";
+
+            // Add Row Functionality
+            $scope.addRow = function (table) {
+                table.push({});
+            };
+
+            // Remove Row Functionality
+            $scope.removeRow = function (table, index) {
+                table.splice(index, 1);
+            };
+
+            // Submit Form
+            $scope.submitForm = function () {
+                const formData = {
+                    Name: $scope.formData.name,
+                    StaffId: $scope.formData.StaffId,
+                    Position: $scope.formData.position,
+                    Subsidiaries: $scope.formData.subsidiaries,
+                    relativeDetails: $scope.relativeDetails,
+                    companyDetails: $scope.companyDetails
+                };
+                console.log("Submitting form with data:", formData);
+
+                $http.post("/api/records", formData)
+                    .then(function (response) {
+
+                        console.log("Response received:", response.data);
+                        if (response.data.message === "Duplicate record found for this Staff ID in the current year.") {
+                            $scope.errorMessage = "Record already exists with the given Staff ID in the current year.";
+                            $scope.successMessage = "";
+                        } else if (response.data.message === "Record and associated data inserted successfully.") {
+                            $scope.successMessage = "Record added successfully!";
+                            $scope.errorMessage = "";
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error("Error occurred:", error);
+                        $scope.errorMessage = "An error occurred while processing the request.";
+                        $scope.successMessage = "";
+                    });
+            };
+        });
+                //</script>
