@@ -127,13 +127,21 @@
             height: 0pt
         }
 
+        .c20_A {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0791666666666666;
+            orphans: 2;
+            widows: 2;
+            text-align: right;
+        }
         .c20 {
             padding-top: 0pt;
             padding-bottom: 0pt;
             line-height: 1.0791666666666666;
             orphans: 2;
             widows: 2;
-            text-align: left
+            text-align: left;
         }
 
         .c21 {
@@ -452,14 +460,18 @@
                 padding-left: 6px; /* Adjust padding for left border */
             }
 
+        input:read-only {
+            background-color: #f0f0f0; /* Light gray background */
+            color: #888; /* Gray text color */
+            border: 1px solid #ccc; /* Optional: to keep consistent styling */
+            cursor: not-allowed; /* Optional: indicate the field is not editable */
+        }
 
     </style>
 
     <button ng-click="toggleLanguage()" class="toggle-btn">
         {{ showEnglish ? "Switch to Arabic" : "Switch to English" }}
     </button>
-
-
 
     <body class="c45 doc-content">
             <p class="c17">
@@ -482,9 +494,9 @@
             <span>
                 Pursuant to the relevant provisions of the Insider Trading Rules of Qatar Financial Market
                 Authority (QFMA), Corporate Governance Code, Conflict of Interest and Confidentiality of Information issued
-                by the relevant authorities from time to time, I , <input type="text" placeholder="Enter your name" ng-model="formData.name" required /> Staff ID   <input type="text" placeholder="Enter Staff id " ng-model="formData.StaffId" required /> , hereby
-                declare that I am holding the position of <input type="text" placeholder="Enter your position" ng-model="formData.position" required />  in Qatar Fuel Company (WOQOD) Q.P.S.C. or its
-                subsidiaries viz.   <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" required /><input type="hidden" ng-init="formData.submissionYear = new Date().getFullYear()" /> (together referred to as &ldquo;the
+                    by the relevant authorities from time to time, I , <input type="text" placeholder="Enter your name" ng-model="formData.name" readonly /> Staff ID   <input type="text" placeholder="Enter Staff id " ng-model="formData.StaffId" readonly /> , hereby
+                    declare that I am holding the position of <input type="text" placeholder="Enter your position" ng-model="formData.position" readonly />  in Qatar Fuel Company (WOQOD) Q.P.S.C. or its
+                    subsidiaries viz.   <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" readonly /><input type="hidden" ng-init="formData.submissionYear = new Date().getFullYear()" /> (together referred to as &ldquo;the
             </span><span class="c38">Company</span><span class="c2">
                 Due to the position that I hold in the Company, I am or
                 may be acquainted with Material Data or Information about the Company, its activities, its clients or
@@ -593,11 +605,11 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="row in relativeDetails">
-                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.RelativeName" required></td>
-                                <td><input type="text" placeholder="Enter Relation" ng-model="row.Relation" required></td>
-                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.IdNumber" required></td>
-                            <td><input type="text" placeholder="Enter NIN" ng-model="row.RNin" required></td>
-                            <td><input type="text" placeholder="Enter Shares" ng-model="row.RShares" required></td>
+                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.relativeName"></td>
+                                <td><input type="text" placeholder="Enter Relation" ng-model="row.relation"></td>
+                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.idNumber"></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.rNin"></td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.rshares"></td>
                             <td>
                                     <button type="button" class="add-btn" ng-click="addRow(relativeDetails)">+</button>
                                 <button type="button" class="remove-btn" ng-click="removeRow(relativeDetails, $index)" ng-show="$index > 0">-</button>
@@ -620,11 +632,11 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="row in companyDetails">
-                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.CompanyName" required></td>
-                                <td><input type="text" placeholder="Enter Owner Name" ng-model="row.OwnerName" required></td>
-                                <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.CR" required></td>
-                            <td><input type="text" placeholder="Enter NIN" ng-model="row.CNin" required></td>
-                            <td><input type="text" placeholder="Enter Shares" ng-model="row.CShares" required></td>
+                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.companyName"></td>
+                                <td><input type="text" placeholder="Enter Owner Name" ng-model="row.ownerName"></td>
+                                <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.cr"></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.cNin"></td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.cshares"></td>
                             <td>
                                     <button type="button" class="add-btn" ng-click="addRow(companyDetails)">+</button>
                                     <button type="button" class="remove-btn" ng-click="removeRow(companyDetails, $index)" ng-show="$index > 0">-</button>
@@ -654,10 +666,6 @@
         </div>
     </body>
 
-
-
-
-
     <body class="c45 doc-content">
         <div ng-show="!showEnglish" dir="rtl">
             <p>!Welcome to the arabic version of the form</p>
@@ -669,13 +677,13 @@
         </p>
         <p class="c8" dir="rtl"><span class="c36" dir="rtl">(يقدم مرة واحدة اثناء الخدمة ما لم يتم تعديله أو حدوث أمور مستجدة)</span></p>
         <p class="c15" dir="rtl"><span class="c2"></span></p>
-        <p class="c20" dir="rtl"><span class="c2">،مسؤول الامتثال</span></p>
-        <p class="c20" dir="rtl"><span class="c2">.شركة قطر للوقود (وقود) ش.م.ع.ق</span></p>
+        <p class="c20_A" dir="rtl"><span class="c2">مسؤول الامتثال,</span></p>
+        <p class="c20_A" dir="rtl"><span class="c2">شركة قطر للوقود (وقود) ش.م.ع.ق.</span></p>
         <p class="c15" dir="rtl"><span class="c2"></span></p>
         <p class="c12" dir="rtl">
             <span class="c35">
-                وفقا للأحكام ذات الصلة من قواعد المطلعين لهيئة قطر للأسواق المالية وقانون حوكمة الشركات وتضارب المصالح وسرية المعلومات الصادرة عن السلطات المختصة من حين لآخر، أقر بموجب هذا بأنني<input type="text" placeholder="Enter your name" ng-model="formData.name" required />
-                أشغل منصب <input type="text" placeholder="Enter your position" ng-model="formData.position" required />  في شركة قطر للوقود (وقود) ش.م.ق.ع. أو الشركات التابعة لها <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" required /> (يشار إليها معا باسم
+                    وفقا للأحكام ذات الصلة من قواعد المطلعين لهيئة قطر للأسواق المالية وقانون حوكمة الشركات وتضارب المصالح وسرية المعلومات الصادرة عن السلطات المختصة من حين لآخر، أقر بموجب هذا بأنني<input type="text" placeholder="Enter your name" ng-model="formData.name" readonly />رقم الموظف<input type="text" placeholder="Enter your position" ng-model="formData.StaffId" readonly />
+                    أشغل منصب <input type="text" placeholder="Enter your position" ng-model="formData.position" readonly />  في شركة قطر للوقود (وقود) ش.م.ق.ع. أو الشركات التابعة لها <input type="text" placeholder="Enter Subsidiaries" ng-model="formData.subsidiaries" readonly /> (يشار إليها معا باسم
             </span><span class="c38" dir="rtl">" الشركة")</span><span class="c2">
                 
             </span>
@@ -781,11 +789,11 @@
                                     <button type="button" class="add-btn" ng-click="addRow(relativeDetails)">+</button>
                                     <button type="button" class="remove-btn" ng-click="removeRow(relativeDetails, $index)" ng-show="$index > 0">-</button>
                             </td>
-                                <td><input type="text" placeholder="Enter Shares" ng-model="row.RShares" required></td>
-                            <td><input type="text" placeholder="Enter NIN" ng-model="row.RNin" required></td>
-                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.IdNumber" required></td>
-                            <td><input type="text" placeholder="Enter Relation" ng-model="row.Relation" required></td>
-                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.RelativeName" required></td>
+                                <td><input type="text" placeholder="Enter Shares" ng-model="row.rshares" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.rNin" required></td>
+                            <td><input type="text" placeholder="Enter QID/Passport" ng-model="row.idNumber" required></td>
+                            <td><input type="text" placeholder="Enter Relation" ng-model="row.relation" required></td>
+                            <td><input type="text" placeholder="Enter Relative Name" ng-model="row.relativeName" required></td>
                         </tr>
                     </tbody>
                 </table>
@@ -808,11 +816,11 @@
                                     <button type="button" class="add-btn" ng-click="addRow(companyDetails)">+</button>
                                 <button type="button" class="remove-btn" ng-click="removeRow(companyDetails, $index)" ng-show="$index > 0">-</button>
                             </td>
-                            <td><input type="text" placeholder="Enter Shares" ng-model="row.CShares" required></td>
-                            <td><input type="text" placeholder="Enter NIN" ng-model="row.CNin" required></td>
-                            <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.CR" required></td>
-                            <td><input type="text" placeholder="Enter Owner Name" ng-model="row.OwnerName" required></td>
-                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.CompanyName" required></td>
+                            <td><input type="text" placeholder="Enter Shares" ng-model="row.cshares" required></td>
+                            <td><input type="text" placeholder="Enter NIN" ng-model="row.cNin" required></td>
+                            <td><input type="text" placeholder="Enter CR/Incorporation #" ng-model="row.cr" required></td>
+                            <td><input type="text" placeholder="Enter Owner Name" ng-model="row.ownerName" required></td>
+                            <td><input type="text" placeholder="Enter Company Name" ng-model="row.companyName" required></td>
                         </tr>
                     </tbody>
                 </table>
@@ -839,10 +847,6 @@
         </div>
     </body>
 
-
-
-    
-
     <script>
         var app = angular.module("myApp", []);
 
@@ -857,6 +861,33 @@
             $scope.companyDetails = [{}];
             $scope.errorMessage = "";
             $scope.successMessage = "";
+
+            $http.get("/api/records/20") // Replace with your API endpoint
+                .then(function (response) {
+                    const data = response.data;
+
+                    console.log("Response received:", data);
+                    // Populate formData fields with API data
+
+                    if (!$scope.formData) {
+                        $scope.formData = {};
+                    }
+                    $scope.formData.name = data.name;
+                    $scope.formData.StaffId = data.staffId;
+                    $scope.formData.position = data.position;
+                    $scope.formData.subsidiaries = data.subsidiaries;
+
+                    // Populate table data
+                    $scope.relativeDetails = data.relativeDetails && data.relativeDetails.length > 0 ? data.relativeDetails : [{}];
+                    $scope.companyDetails = data.companyDetails && data.companyDetails.length > 0 ? data.companyDetails : [{}];
+                    $scope.relativeName=data.relativeDetails.relativeName
+
+                })
+                .catch(function (error) {
+                    console.error('Error fetching data:', error);
+                     $scope.relativeDetails = [{}];
+        $scope.companyDetails = [{}];
+                });
 
             // Add Row Functionality
             $scope.addRow = function (table) {
@@ -885,7 +916,7 @@
 
                         console.log("Response received:", response.data);
                         if (response.data.message === "Duplicate record found for this Staff ID in the current year.") {
-                            $scope.errorMessage = "Record already exists with the given Staff ID in the current year.";
+                            $scope.errorMessage = "This person has already submitted COI for the current year ";
                             $scope.successMessage = "";
                         } else if (response.data.message === "Record and associated data inserted successfully.") {
                             $scope.successMessage = "Record added successfully!";
@@ -899,4 +930,120 @@
                     });
             };
         });
-                //</script>
+ </script>
+
+
+    <div ng-controller="reportController">
+        <style>
+
+
+            .report-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+                .report-table th,
+                .report-table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+
+                .report-table th {
+                    background-color: #f2f2f2;
+                    color: black;
+                }
+
+                .report-table tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+
+                .report-table tr:hover {
+                    background-color: #ddd;
+                }
+
+            button {
+                margin-left: 10px;
+                padding: 5px 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+                button:hover {
+                    background-color: #45a049;
+                }
+
+
+            select {
+                width: 200px; /* Wider dropdown */
+                padding: 5px;
+                font-size: 14px;
+            }
+
+        </style>
+        <h1>Trades Report</h1>
+
+        <!-- Dropdown for SubmissionYear -->
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect" ng-model="selectedYear">
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+    </select>
+
+
+        <!-- Search Button -->
+        <button ng-click="fetchTrades()">Search</button>
+
+        <!-- Table to display data -->
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>STAFF ID</th>
+                    <th>NAME</th>
+                    <th>POSITION</th>
+                    <th>SUBSIDIARIES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="trade in trades">
+                    <td>{{trade.staffId}}</td>
+                    <td>{{trade.name}}</td>
+                    <td>{{trade.position}}</td>
+                    <td>{{trade.subsidiaries}}</td>
+                </tr>
+            </tbody>
+        </table>
+            <p ng-show="trades.length === 0 && initialLoad">No trades available for the selected year.</p>
+
+        <script>
+
+            app.controller("reportController", function ($scope, $http) {
+                $scope.selectedYear = "2024"; 
+                $scope.trades = [];
+                $scope.initialLoad = false;
+
+                $scope.fetchTrades = function () {
+                    const year = $scope.selectedYear;
+                    console.log("Fetch Trades API called for year:", year); 
+                    $http.get("/api/Records/GetTradesByYear/" + year)
+                        .then(function (response) {
+                            $scope.trades = response.data;
+                            $scope.initialLoad = true;
+                            console.log("Trades fetched successfully:", $scope.trades);
+                        })
+                        .catch(function (error) {
+                            console.error("Error fetching trades:", error);
+                            $scope.trades = [];
+                            $scope.initialLoad = true;
+                        });
+                };
+            });
+
+        </script>
+
+    </div>
+</div>
